@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  background-image: url("https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/122e6caea8b2a2dbb6d6e71eea4e24effab342da-5120x574.png?accountingTag=VAL&auto=format&fit=fill&q=80&w=5120");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #0f1923;
+}
+
+.facts-content {
+  padding: 40px 60px;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, #fff 0%, #ff4655 100%);
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff4655, transparent);
+}
+
+.welcom {
+  background: rgba(25, 35, 44, 0.8);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  line-height: 120%;
+  padding: 20px 30px;
+  border-radius: 16px;
+  border-left: 4px solid #ff4655;
+  margin-bottom: 50px;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.fact-card {
+  background: rgba(46, 64, 82, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  backdrop-filter: blur(5px);
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  background: rgba(40, 40, 55, 0.8);
+  border-left-color: #ff4655;
+}
+
+.fact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.fact-tag {
+  display: inline-block;
+  background: #ff4655;
+  border-radius: 30px;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.fact-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ff4655;
+}
+
+.fact-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #b0b0b0;
+}
