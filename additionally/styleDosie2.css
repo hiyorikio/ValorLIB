@@ -41,19 +41,21 @@ body {
   background: linear-gradient(90deg, #ff4655, transparent);
 }
 
-
 .welcome {
-    background: rgba(25, 35, 44, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 20px 30px;
-    border-radius: 16px;
-    border-left: 4px solid #ff4655;
-    margin-bottom: 30px;
+  background: rgba(25, 35, 44, 0.8);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  line-height: 120%;
+  padding: 20px 30px;
+  border-radius: 16px;
+  border-left: 4px solid #ff4655;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
 }
 
-.container {
-    display: flex;
-    gap: 30px;
+.welcome:hover {
+  transform: translateX(8px);
+  box-shadow: 0 5px 20px rgba(255, 70, 85, 0.2);
 }
 
 
