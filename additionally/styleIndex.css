@@ -24,9 +24,8 @@ a {
 }
 
 button {
-  width: 14vw;
-  font-size: 0.9em;
-  height: 8vh;
+  width: 16vw;
+  height: 10vh;
   line-height: 100%;
   margin: 20px;
   background-color: #ff4655;
