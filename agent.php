@@ -1,16 +1,3 @@
-<?php 
-require_once 'config.php';
-$selected_role = isset($_GET['role_id']) ? (int)$_GET['role_id'] : 0;
-$sql = "SELECT agents.*, roles.name as role_name 
-        FROM agents 
-        LEFT JOIN roles ON agents.role_id = roles.id";
-if ($selected_role > 0) {
-    $sql .= " WHERE agents.role_id = $selected_role";
-}
-$result = $conn->query($sql);
-$roles_list = $conn->query("SELECT * FROM roles");
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -24,6 +11,20 @@ $roles_list = $conn->query("SELECT * FROM roles");
 
 <body>
     <?php include 'includes/header.php';?>
+
+    <?php 
+require_once 'config.php';
+$selected_role = isset($_GET['role_id']) ? (int)$_GET['role_id'] : 0;
+$sql = "SELECT agents.*, roles.name as role_name 
+        FROM agents 
+        LEFT JOIN roles ON agents.role_id = roles.id";
+if ($selected_role > 0) {
+    $sql .= " WHERE agents.role_id = $selected_role";
+}
+$result = $conn->query($sql);
+$roles_list = $conn->query("SELECT * FROM roles");
+?>
+
     <main>
         <div class="Content">
             <h2 class="main-title">Галерея агентов</h2>
@@ -63,8 +64,8 @@ $roles_list = $conn->query("SELECT * FROM roles");
                         <h3><?php echo htmlspecialchars($row['name']); ?></h3>
                         <p><?php echo nl2br(htmlspecialchars($row['description'])); ?></p>
                     </div>
-                    <a target="_blank" href="<?php echo htmlspecialchars($row['adress']); ?>" class="external-link">
-                        Узнать на официальном сайте ➤
+                    <a href="agent_detail.php?id=<?php echo $row['id']; ?>" class="external-link">
+                        Подробнее ➤
                     </a>
                 </div>
                 <?php 
