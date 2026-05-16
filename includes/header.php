@@ -23,7 +23,7 @@
                     <a href="facts.php" class="nav-link">Интересные факты</a>
                 </li>
                 <li class="nav-item">
-                    <a href="dosie2.php" class="nav-link">Досье</a>
+                    <a href="dosie.php" class="nav-link">Досье</a>
                 </li>
             </ul>
         </nav>
